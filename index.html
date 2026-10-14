@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANSCRIPTOR DE CODIGO MORSE</title>
+</head>
+<body style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); min-height: 100vh;">
+    <div class="container py-5">
+        <div class="text-center text-white mb-4">
+            <h1 class="display-5 fw-bold"><i class="fa-solid fa-tower-broadcast"></i> TRANSCRIPTOR DE CODIGO MORSE</h1>
+            <p class="lead">TEXTO A CODIGO MORSE Y CODIGO MORSE A TEXTL</p>
+        </div>
+
+        <div class="card shadow mx-auto" style="max-width: 800px;">
+            <div class="card-body p-4">
+                <div class="btn-group w-100 mb-4" role="group">
+                    <input type="radio" class="btn-check" name="modo" id="modoTexto" value="texto" checked>
+                    <label class="btn btn-outline-primary" for="modoTexto">Texto <i class="fa-solid fa-arrow-right"></i> Morse</label>
+                    <input type="radio" class="btn-check" name="modo" id="modoMorse" value="morse">
+                    <label class="btn btn-outline-primary" for="modoMorse">Morse <i class="fa-solid fa-arrow-right"></i> Texto</label>
+                </div>
+
+                <label id="etiquetaEntrada" for="entrada" class="form-label fw-bold">Texto</label>
+                <textarea id="entrada" class="form-control mb-3" rows="4"></textarea>
+
+                <div class="d-flex gap-2 mb-3">
+                    <button id="btnConvertir" class="btn btn-primary flex-fill"><i class="fa-solid fa-right-left"></i> Convertir</button>
+                    <button id="btnLimpiar" class="btn btn-outline-secondary"><i class="fa-solid fa-eraser"></i> BORRAR</button>
+                </div>
+
+                <label id="etiquetaSalida" for="salida" class="form-label fw-bold">Código morse</label>
+                <textarea id="salida" class="form-control mb-3" rows="4" readonly></textarea>
+
+                <button id="btnCopiar" class="btn btn-success w-100"><i class="fa-solid fa-copy"></i>OPIAR</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./bundle.js"></script>
+</body>
+</html>
